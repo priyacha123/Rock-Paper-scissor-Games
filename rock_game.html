@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="rockGameStyle.css">
+  <link rel="stylesheet" href="rockanimation_style.css">
+</head>
+
+<body>
+   <!-- Popup Modal
+   <div id="popupModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closePopup">&times;</span>
+        <p>Back to Zero: Let the Quest for Glory Start Again!</p>
+    </div>
+</div> -->
+ 
+<div class="wrapper">
+  
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  <div class="box1"></div>
+  
+  <center>
+    <p class="title">"Fate’s Forge: Rock, Paper, Scissors Saga"</p>
+  </center>
+  <p class="choose">Unleash your spirit: will you crush, cover, or cut? Choose your champion!</p>
+  <div class="box">
+    <button class="btn" onclick=" 
+      playGame1('Rock');
+      ">
+    <img src="images/Rock.jpg" alt=""></button>
+    <button class="btn" onclick="
+         playGame1('Paper');
+         ">
+       <img src="images/Paper.jpg" alt=""></button>
+    <button class="btn" onclick="
+       playGame1('Scissor');
+       ">
+    <img src="images/Scissor.jpg" alt=""></button>
+</div>
+<p class="js-result"></p>
+<p class="js-moves"></p>
+<p class="js-score">
+   
+  </p>
+  <p class="restart">Ending your session? Click Reset to clear scores!</p>
+  <button class="reset" onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+      updateScore();
+      alert('Back to Zero: Let the Quest for Glory Start Again!')
+  "> 
+  <img src="images/resetImg-2.jpg" alt=""></button>
+
+</div>
+
+<script src="rock_game.js"></script> 
+</body>
+
+</html>
